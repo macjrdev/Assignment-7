@@ -1,5 +1,5 @@
 // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
-let form = document.getElementById('addForm');
+let form  = document.getElementById('addForm');
 let table = document.getElementById('employees');
 
 
@@ -33,11 +33,11 @@ form.addEventListener('submit', (e) => {
 
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
-    let tdEmpID = document.createTextNode(empID)
-    let tdEmpName = document.createTextNode(empName)
-    let tdEmpExt = document.createTextNode(empExt)
-    let tdEmpEmail = document.createTextNode(empEmail)
-    let tdEmpDep = document.createTextNode(empDep)
+    let tdEmpID     = document.createTextNode(empID)
+    let tdEmpName   = document.createTextNode(empName)
+    let tdEmpExt    = document.createTextNode(empExt)
+    let tdEmpEmail  = document.createTextNode(empEmail)
+    let tdEmpDep    = document.createTextNode(empDep)
 
     cell1.appendChild(tdEmpID)
     cell2.appendChild(tdEmpName)
@@ -47,12 +47,13 @@ form.addEventListener('submit', (e) => {
 
 
     // CREATE THE DELETE BUTTON
-    let deleteBtn = document.createElement('button')
+    let deleteBtn     = document.createElement('button')
     let deleteBtnText = document.createTextNode('X')
+
     deleteBtn.appendChild(deleteBtnText)
     cell6.appendChild(deleteBtn)
 
-    
+
     // DELETE EMPLOYEE
     deleteBtn.addEventListener('click', (e) => {
         table.deleteRow(e.target.parentNode.parentNode.rowIndex)
@@ -68,5 +69,6 @@ form.addEventListener('submit', (e) => {
 
 
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
+
 });
 
